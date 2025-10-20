@@ -15,7 +15,7 @@
     // Mengatur encoding karakter ke UTF-8
     pg_set_client_encoding($conn, 'UTF8');
 
-    // Query untuk menampilkan data dari tabel TB_Mahasiswa
+    // Query untuk menampilkan data dari tabel TB_Restoran
     $sql = 'SELECT
                 "id_pelanggan" AS "ID_Pelanggan",
                 "Nama",
@@ -38,12 +38,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Data Pelanggan</title>
 </head>
 <body>
-    <h1>Daftar Pelanggan</h1>
+    <h1>Daftar Pelanggan Restoran</h1>
     <table border="1" cellpadding="10" cellspacing="0">
         <tr>
             <th>No.</th>
@@ -73,8 +74,3 @@
     </table>
 </body>
 </html>
-<?php
-// Bebaskan hasil & tutup koneksi (opsional)
-pg_free_result($result);
-pg_close($conn);
-?>
